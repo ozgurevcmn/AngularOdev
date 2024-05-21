@@ -73,7 +73,6 @@ export class ProductCardListComponent {
         (product) => product.categoryId === this.filterByCategoryId
       );
     }
-
     return filteredProductList;
   }
 }

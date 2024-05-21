@@ -7,6 +7,7 @@ import { ProductListComponent } from '../../features/products/components/product
 import { SharedModule } from '../../shared/shared.module';
 import { IfNotDirective } from '../../shared/directives/if-not.directive';
 import { isPlatformBrowser, CommonModule, DOCUMENT } from '@angular/common';
+import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-home-page',
@@ -18,6 +19,7 @@ import { isPlatformBrowser, CommonModule, DOCUMENT } from '@angular/common';
     ProductListComponent,
     ProductCardListComponent,
     IfNotDirective,
+    NavbarComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
@@ -65,7 +67,7 @@ export class HomePageComponent implements OnInit {
       .unsubscribe();
   }
 
-  onChangeCategorySelect(event: number | null = null) {
+  onChangeCategorySelect(event: number | null) {
     this.selectedCategoryId = event;
 
     this.router.navigate([], {
@@ -74,7 +76,7 @@ export class HomePageComponent implements OnInit {
     });
   }
 
-  onViewProduct({ product }: { product: ProductListItem; }) {
-    this.router.navigate([product.id, product.categoryId ,product.name, product.price, product.description, product.imageUrl]); // localhost:4200/products/detail/1
-  }
+  onViewProduct(product: ProductListItem) {
+    this.router.navigate([product.categoryId,product.description,product.name,product.price,product.imageUrl, product.id]);
+  }  
 }

@@ -1,13 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
+import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-basic-layout',
   standalone: true,
   imports: [
-    FooterComponent
+    FooterComponent,
   //   CommonModule,
-  //   NavbarComponent,
+    NavbarComponent,
   //   FooterComponent
   ],
   templateUrl: './basic-layout.component.html',
