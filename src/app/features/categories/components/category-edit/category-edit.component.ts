@@ -35,9 +35,9 @@ export class CategoryEditComponent implements OnInit {
       },
       (error: any) => {
         if (error instanceof Error) {
-          console.error('Güncelleme hatası:', error.message);
+          console.error('Update Error:', error.message);
         } else {
-          console.error('Güncelleme hatası:', error);
+          console.error('Update Error:', error);
         }
       }
     );
@@ -50,7 +50,7 @@ export class CategoryEditComponent implements OnInit {
           // Başarılı silme durumunda yapılacak işlemler
         },
         (error: any) => {
-          console.error('Silme hatası:', error);
+          console.error('Delete Error:', error);
         }
       );
     }

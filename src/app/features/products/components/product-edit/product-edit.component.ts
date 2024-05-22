@@ -30,7 +30,7 @@ export class ProductEditComponent implements OnInit {
         this.router.navigate(['/products']);
       },
       (error: any) => {
-        console.error('Güncelleme hatası:', error);
+        console.error('Update Error:', error);
       }
     );
   }
@@ -42,7 +42,7 @@ export class ProductEditComponent implements OnInit {
           // Başarılı silme durumunda yapılacak işlemler
         },
         (error: any) => {
-          console.error('Silme hatası:', error);
+          console.error('Delete Error:', error);
         }
       );
     }
