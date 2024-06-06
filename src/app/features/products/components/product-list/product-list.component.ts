@@ -4,6 +4,7 @@ import { ProductsService } from '../../services/products.service'; // Make sure 
 import { ProductListItem } from '../../models/product-list-item'; // Make sure the path to the model is correct
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',

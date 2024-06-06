@@ -9,6 +9,7 @@ import { IfNotDirective } from '../../shared/directives/if-not.directive';
 import { isPlatformBrowser, CommonModule, DOCUMENT } from '@angular/common';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 
+
 @Component({
   selector: 'app-home-page',
   standalone: true,
@@ -75,8 +76,8 @@ export class HomePageComponent implements OnInit {
       relativeTo: this.route,
     });
   }
-
+  
   onViewProduct(product: ProductListItem) {
-    this.router.navigate([product.categoryId,product.description,product.name,product.price,product.imageUrl, product.id]);
+    this.router.navigate(['products', 'detail', product.id]);
   }  
 }
